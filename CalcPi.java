@@ -11,7 +11,7 @@ public class CalcPi {
 		sum += (minus*((double)(1/(base))));
 		minus = minus *(-1);
 	}
-	System.out.println("pi according to Java : " + Math.PI);
+	System.out.println("pi according to Java: " + Math.PI);
 	System.out.println("pi, approximated:     " + sum*4);
 
 	}
