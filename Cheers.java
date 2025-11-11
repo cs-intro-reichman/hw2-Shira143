@@ -14,7 +14,7 @@ public class Cheers {
                 }
                 else
                 {
-                        System.out.println("Give me an " + currentLetter + ": " + currentLetter + "!");
+                        System.out.println("Give me a  " + currentLetter + ": " + currentLetter + "!");
                 }
              }
              System.out.println("What does that spell?");
