@@ -4,24 +4,23 @@ public class Cheers {
                 String scream = args[0];
                 int times = Integer.parseInt(args[1]);
                  scream = scream.toUpperCase();
+                 String specialLetters  = "AEFHILMNORSX";
                 for (int i = 0; i < scream.length(); i++) 
                 {
-                  
-                if ( (scream.indexOf('A')) == i || (scream.indexOf('E')) == i|| (scream.indexOf('F') )== i
-                 || (scream.indexOf('H')) == i|| (scream.indexOf('I')) == i|| (scream.indexOf('L'))== i
-                 || (scream.indexOf('M'))== i || (scream.indexOf('N')== i || (scream.indexOf('O'))== i
-                 || (scream.indexOf('R'))== i|| (scream.indexOf('S')) == i || ((scream.indexOf('X'))== i)))
+                  char currentLetter = scream.charAt(i);
+                if ( specialLetters.indexOf(currentLetter) >= 0)
                 {
-                        System.out.println("Give me an " + scream.charAt(i) + "!");
+                        System.out.println("Give me an " + currentLetter + ": " + currentLetter + "!");
                 }
                 else
                 {
-                        System.out.println("Give me a  " + scream.charAt(i) + "!");
+                        System.out.println("Give me an " + currentLetter + ": " + currentLetter + "!");
                 }
-        }
-        for (int i = 0; i <times; i++) 
+             }
+             System.out.println("What does that spell?");
+             for (int i = 0; i <times; i++) 
         {
-                    System.out.println(scream + " !!!");
+                    System.out.println(scream + "!!!");
 
         }     
                
