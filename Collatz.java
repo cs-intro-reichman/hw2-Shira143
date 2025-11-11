@@ -6,44 +6,47 @@ public class Collatz {
 	public static void main(String args[]) {
 		int N = Integer.parseInt(args[0]);
 		String mode = args[1];	
-		int count = 1;
-		boolean a = true;
-		int seed = N;
-	if (mode.equals("v"))
-	{
+		long seed = N;
+		boolean letter = mode.equals("v");
 		for (int i = 1; i <= N; i++)
 		 {
-			seed = i;
-			System.out.print(seed + " ");
-	while ((seed != 1) || (a))
+			long currentNum = seed;
+			int count = 0;
+			if (letter)
+			{
+				System.out.print(seed);
+			}
+		while ((currentNum != 1))
 	{
-		if (seed%2 == 0)
+		if (currentNum%2 == 0)
 		{
-			seed = seed/2;
-			count++;
+			currentNum = currentNum/2;
 		}
 		else
 		{
-			seed = (seed*3)+1;
-			count++;
+			currentNum = (currentNum*3)+1;
 		}
-		a = false;
-		System.out.print(seed + " ");	
+		count++;
+		if (letter)
+		{
+			System.out.println(" " + currentNum);
+		}
 	}
-		System.out.print("(" + count + ")")	;
-		System.out.println("");
-		count = 1;
+		if (letter)
+		{
+			System.out.println("(" + count + "()");
+		}	
+	System.out.print("(" + count + ")")	;
 	}	
-		System.out.println("Every one of the first " + seed + " hailstone sequences reached 1.");
+	if (letter && N >0 )
+	{
+	System.out.println();	
 
+	}
+	System.out.println("Every one of the first " + N + " hailstone sequences reached 1.");
 		
 }
-	else
-		{
-			System.out.println("Every one of the first " + seed + " hailstone sequences reached 1.");
 
-		}
-
-}}
+}
 
 
